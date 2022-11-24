@@ -1,0 +1,10 @@
+/* .my-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+.returnHomeLink {
+  text-align: center;
+  margin: 30px 15px 30px 15px;
+}

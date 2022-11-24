@@ -3,3 +3,72 @@ a { cursor: pointer; }
 .app-container {
     min-height: 350px;
 }
+
+html {
+    font-size: 18px;
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    font-family: 'Readex Pro', 'Inter', 'Fira Sans', Helvetica Neue, sans-serif;
+    line-height: 1.5;
+    letter-spacing: 0.0625em;
+    color: #000;
+    background-color: #FFF;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  a, li {
+    text-decoration: none!important;
+  }
+  
+  a, button {
+    cursor: pointer;
+  }
+  
+  a {
+    display: inline;
+    font-weight: 500;
+    color: #000;
+    border-bottom: 3.5px solid #000;
+    background: transparent;
+  }
+  
+  a:hover {
+    border-radius: 1.75px;
+    color: #FFF;
+    background-color: #000;
+  }
+  
+  em {
+    font-family: 'Sriracha', 'Fira Sans', Helvetica Neue, sans-serif;
+  }
+  
+  section {
+    margin: 1rem 0 0 0;
+  }
+  
+  ::selection {
+    color: #fff;
+    background: #000;
+  }
+  
+  ::-moz-selection {
+    color: #fff;
+    background: #000;
+  }

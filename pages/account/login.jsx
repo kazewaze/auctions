@@ -6,6 +6,9 @@ import * as Yup from 'yup';
 import { Link } from 'components';
 import { Layout } from 'components/account';
 import { userService, alertService } from 'services';
+// import classes from '../../helpers/classes'
+
+import styles from '../../styles/login.module.css'
 
 export default Login;
 
@@ -26,8 +29,8 @@ function Login() {
     function onSubmit({ username, password }) {
         return userService.login(username, password)
             .then(() => {
-                // get return url from query parameters or default to '/'
-                const returnUrl = router.query.returnUrl || '/';
+                // get return url from query parameters or default to '/dashboard'
+                const returnUrl = router.query.returnUrl || '/dashboard';
                 router.push(returnUrl);
             })
             .catch(alertService.error);
@@ -36,7 +39,7 @@ function Login() {
     return (
         <Layout>
             <div className="card">
-                <h4 className="card-header">Login</h4>
+                <h4 className="card-header">Admin Login</h4>
                 <div className="card-body">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group">
@@ -53,9 +56,11 @@ function Login() {
                             {formState.isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>}
                             Login
                         </button>
-                        <Link href="/account/register" className="btn btn-link">Register</Link>
                     </form>
                 </div>
+            </div>
+            <div className={styles.returnHomeLink}>
+              <Link href="/">Go Home</Link>
             </div>
         </Layout>
     );

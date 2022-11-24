@@ -1,9 +1,8 @@
 import { userService } from 'services';
 import { Link } from 'components';
+// import styles from '../../styles/pages/admin/dashboard.module.css'
 
-export default Dashboard;
-
-function Dashboard() {
+export default function Dashboard() {
     return (
         <div className="p-4">
             <div className="container">

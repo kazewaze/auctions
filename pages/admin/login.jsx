@@ -8,7 +8,7 @@ import { Layout } from 'components/account';
 import { userService, alertService } from 'services';
 // import classes from '../../helpers/classes'
 
-import styles from '../../styles/login.module.css'
+import styles from '../../styles/pages/admin/login.module.css'
 
 export default Login;
 

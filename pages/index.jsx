@@ -1,8 +1,8 @@
-import { Link } from 'components';
+// import styles from '../styles/pages/home.module.css'
 
-export default Home;
+import { Link } from 'components'
 
-function Home() {
+export default function Home() {
     return (
         <div className="p-4">
             <div className="container">

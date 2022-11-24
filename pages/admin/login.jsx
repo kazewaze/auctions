@@ -30,7 +30,7 @@ function Login() {
         return userService.login(username, password)
             .then(() => {
                 // get return url from query parameters or default to '/dashboard'
-                const returnUrl = router.query.returnUrl || '/dashboard';
+                const returnUrl = router.query.returnUrl || '/admin/dashboard';
                 router.push(returnUrl);
             })
             .catch(alertService.error);

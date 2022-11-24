@@ -7,7 +7,7 @@ function Home() {
         <div className="p-4">
             <div className="container">
                 <h1>Ingram Auctions</h1>
-                <p><Link href="/account/login">Login</Link></p>
+                <p><Link href="/admin/login">Login</Link></p>
             </div>
         </div>
     );

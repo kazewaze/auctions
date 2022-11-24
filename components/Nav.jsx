@@ -23,8 +23,8 @@ function Nav() {
     return (
         <nav className="navbar navbar-expand navbar-dark bg-dark">
             <div className="navbar-nav">
-                <NavLink href="/dashboard" exact className="nav-item nav-link">Home</NavLink>
-                <NavLink href="/users" className="nav-item nav-link">Users</NavLink>
+                <NavLink href="/admin/dashboard" exact className="nav-item nav-link">Home</NavLink>
+                <NavLink href="/admin/users" className="nav-item nav-link">Users</NavLink>
                 <a onClick={logout} className="nav-item nav-link">Logout</a>
             </div>
         </nav>

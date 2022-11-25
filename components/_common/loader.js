@@ -1,4 +1,4 @@
-export default `
+const loader = `
 body{
 display: block;
 }
@@ -56,3 +56,5 @@ display: block;
   transform: rotate(360deg);
  }
 }`;
+
+export default loader;

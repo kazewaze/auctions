@@ -1,10 +1,27 @@
-/* .my-card {
+.Card {
+  width: 300px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-} */
+  align-items: center;
+  margin: 0 0 30px 0;
+}
+
+.cardBody {
+  margin: 30px 0 0 0;
+}
+
+.formGroup {
+  padding: 7px 0 7px 0;
+}
+
+.extraSpace {
+  padding: 7px 0 14px 0;
+}
 
 .returnHomeLink {
   text-align: center;
   margin: 30px 15px 30px 15px;
+  padding: 3.5px;
 }

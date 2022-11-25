@@ -1,14 +1,14 @@
 // import styles from '../styles/pages/home.module.css'
 
-import { Link } from 'components'
+import Layout from '../components/_common/layout'
+// import { Link } from 'components'
 
 export default function Home() {
     return (
-        <div className="p-4">
+        <Layout>
             <div className="container">
-                <h1>Ingram Auctions</h1>
-                <p><Link href="/admin/login">Login</Link></p>
+              <h1>Welcome</h1>
             </div>
-        </div>
+        </Layout>
     );
 }

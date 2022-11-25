@@ -3,9 +3,7 @@ import { useState, useEffect } from 'react';
 import { NavLink } from '.';
 import { userService } from 'services';
 
-export { Nav };
-
-function Nav() {
+export function Nav() {
     const [user, setUser] = useState(null);
 
     useEffect(() => {

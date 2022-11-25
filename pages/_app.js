@@ -8,14 +8,19 @@ import 'styles/globals.css';
 import { userService } from 'services';
 import { Nav, Alert } from 'components';
 
-export default App;
-
-function App({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
     const router = useRouter();
     const [user, setUser] = useState(null);
     const [authorized, setAuthorized] = useState(false);
 
     useEffect(() => {
+        if (typeof window !== 'undefined') {
+          const loader = document.getElementById('globalLoader');
+          if (loader) {
+            loader.style.display = 'none';
+          }
+        }
+
         // on initial load - run auth check 
         authCheck(router.asPath);
 
@@ -38,12 +43,12 @@ function App({ Component, pageProps }) {
     function authCheck(url) {
         // redirect to login page if accessing a private page and not logged in 
         setUser(userService.userValue);
-        const publicPaths = ['/', '/admin/login'];
+        const publicPaths = ['/', '/upcoming', '/past', '/about', '/contact', '/admin/login'];
         const path = url.split('?')[0];
         if (!userService.userValue && !publicPaths.includes(path)) {
             setAuthorized(false);
             router.push({
-                pathname: '/account/login',
+                pathname: '/admin/login',
                 query: { returnUrl: router.asPath }
             });
         } else {
@@ -57,22 +62,13 @@ function App({ Component, pageProps }) {
                 <title>Ingram Auctions</title>
                 
                 {/* eslint-disable-next-line @next/next/no-css-tags */}
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-                <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
-                <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
-                <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-                <link href="//netdna.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
-                <link rel="icon" type="image/svg+xml" href="/favicon.png" />
             </Head>
 
-            <div className={`app-container ${user ? 'bg-light' : ''}`}>
                 <Nav />
                 <Alert />
                 {authorized &&
                     <Component {...pageProps} />
                 }
-            </div>
         </>
     );
 }

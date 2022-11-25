@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
 
-import { Link, Spinner } from 'components';
-import { Layout } from 'components/users';
+import { Link } from 'components';
+import Layout from '../../../components/_common/adminLayout';
 import { userService } from 'services';
 
-export default Index;
-
-function Index() {
+export default function Index() {
     const [users, setUsers] = useState(null);
 
     useEffect(() => {
@@ -53,13 +51,6 @@ function Index() {
                             </td>
                         </tr>
                     )}
-                    {!users &&
-                        <tr>
-                            <td colSpan="4">
-                                <Spinner />
-                            </td>
-                        </tr>
-                    }
                     {users && !users.length &&
                         <tr>
                             <td colSpan="4" className="text-center">

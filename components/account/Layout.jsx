@@ -3,9 +3,9 @@ import { useRouter } from 'next/router';
 
 import { userService } from 'services';
 
-export { Layout };
+import styles from '../styles/account.module.css';
 
-function Layout({ children }) {
+export function Layout({ children }) {
     const router = useRouter();
 
     useEffect(() => {
@@ -18,8 +18,10 @@ function Layout({ children }) {
     }, []);
 
     return (
-        <div className="col-md-6 offset-md-3 mt-5">
+        <div className={styles.container}>
+          <div className={styles.main}>
             {children}
+          </div>
         </div>
     );
 }

@@ -6,7 +6,7 @@ import styles from '../styles/header.module.css';
 import classes from '../../helpers/classes';
 import generateLinks from '../../helpers/links';
 
-import { NavLink } from 'components';
+// import { NavLink } from 'components';
 import { userService } from 'services';
 
 const links = {
@@ -40,17 +40,15 @@ function MobileMenu({admin, logout}) {
 
 export default function Header({admin}) {
 
-  if (admin) {
-    const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null);
 
-    useEffect(() => {
-      const subscription = userService.user.subscribe(x => setUser(x));
-      return () => subscription.unsubscribe();
-    }, []);
+  useEffect(() => {
+    const subscription = userService.user.subscribe(x => setUser(x));
+    return () => subscription.unsubscribe();
+  }, []);
 
-    function logout() {
-      userService.logout();
-    }
+  function logout() {
+    userService.logout();
   }
 
   return (

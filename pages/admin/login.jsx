@@ -51,7 +51,7 @@ export default function Login() {
                             <input name="password" type="password" {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} />
                             <div className={styles.invalidFeedback}>{errors.password?.message}</div>
                         </div>
-                        <button disabled={formState.isSubmitting} className={styles.Btn} onClick={handleClick(e)}>
+                        <button disabled={formState.isSubmitting} className={styles.Btn}>
                             {/* {formState.isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>} */}
                             Login
                         </button>

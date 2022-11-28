@@ -52,7 +52,7 @@ export default function Login() {
                             <div className={styles.invalidFeedback}>{errors.password?.message}</div>
                         </div>
                         <button disabled={formState.isSubmitting} className={styles.Btn}>
-                            {/* {formState.isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>} */}
+                            {formState.isSubmitting}
                             Login
                         </button>
                     </form>

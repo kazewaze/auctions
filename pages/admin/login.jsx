@@ -28,8 +28,8 @@ export default function Login() {
         return userService.login(username, password)
             .then(() => {
                 // get return url from query parameters or default to '/dashboard'
-                const returnUrl = router.query.returnUrl || '/admin/dashboard';
-                router.push(returnUrl);
+                // const returnUrl = router.query.returnUrl || '/admin/dashboard';
+                router.push('/admin/dashboard');
             })
             .catch(alertService.error);
     }
@@ -51,7 +51,7 @@ export default function Login() {
                             <div className={styles.invalidFeedback}>{errors.password?.message}</div>
                         </div>
                         <button disabled={formState.isSubmitting} className={styles.Btn}>
-                            {formState.isSubmitting}
+                        {formState.isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>}
                             Login
                         </button>
                     </form>

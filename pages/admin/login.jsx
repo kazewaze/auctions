@@ -24,8 +24,7 @@ export default function Login() {
     const { register, handleSubmit, formState } = useForm(formOptions);
     const { errors } = formState;
 
-    function onSubmit(event, { username, password }) {
-        event.preventDefault();
+    function onSubmit({ username, password }) {
         return userService.login(username, password)
             .then(() => {
                 // get return url from query parameters or default to '/dashboard'

@@ -24,7 +24,8 @@ export default function Login() {
     const { register, handleSubmit, formState } = useForm(formOptions);
     const { errors } = formState;
 
-    function onSubmit({ username, password }) {
+    function onSubmit(event, { username, password }) {
+        event.preventDefault();
         return userService.login(username, password)
             .then(() => {
                 // get return url from query parameters or default to '/dashboard'
@@ -50,7 +51,7 @@ export default function Login() {
                             <input name="password" type="password" {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} />
                             <div className={styles.invalidFeedback}>{errors.password?.message}</div>
                         </div>
-                        <button disabled={formState.isSubmitting} className={styles.Btn}>
+                        <button disabled={formState.isSubmitting} className={styles.Btn} onClick={handleClick(e)}>
                             {/* {formState.isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>} */}
                             Login
                         </button>

@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
-
 import { Layout, AddEdit } from 'components/users';
-import { Spinner } from 'components';
 import { userService, alertService } from 'services';
 
 export default Edit;
@@ -21,7 +19,8 @@ function Edit({ id }) {
     return (
         <Layout>
             <h1>Edit User</h1>
-            {user ? <AddEdit user={user} /> : <Spinner /> }
+            <AddEdit user={user} />
+            {!user ? <h3>No User Exists</h3> : ''}
         </Layout>
     );
 }

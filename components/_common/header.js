@@ -55,13 +55,13 @@ export default function Header({admin}) {
       <header className={styles.header}>
         <nav className={styles.nav}>
           <div className={styles.imgWrapper}>
-            <Link href="/">
+            <Link href={admin ? '/admin/dashboard' : '/'}>
               <a>
                 <Image height={"50px"} width={"150px"} className={styles.logo} src="/Logo.png" alt="Ingram Auctions Logo"/>
               </a>
             </Link>
           </div>
-          <hr className={styles.hLine}/>
+          <hr className={styles.hLine} noshade="" />
           <ul className={styles.links}>
             { admin ? links["admin"] : links["user"] }
             { admin ? <li key="LogoutKey"><a onClick={logout}>Logout</a></li> : ''}

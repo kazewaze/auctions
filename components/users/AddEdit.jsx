@@ -6,9 +6,7 @@ import * as Yup from 'yup';
 import { Link } from 'components';
 import { userService, alertService } from 'services';
 
-export { AddEdit };
-
-function AddEdit(props) {
+export function AddEdit(props) {
     const user = props?.user;
     const isAddMode = !user;
     const router = useRouter();
@@ -96,7 +94,7 @@ function AddEdit(props) {
                     Save
                 </button>
                 <button onClick={() => reset(formOptions.defaultValues)} type="button" disabled={formState.isSubmitting} className="btn btn-secondary">Reset</button>
-                <Link href="/users" className="btn btn-link">Cancel</Link>
+                <Link href="/admin/users" className="btn btn-link">Cancel</Link>
             </div>
         </form>
     );

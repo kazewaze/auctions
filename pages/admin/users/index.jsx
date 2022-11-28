@@ -24,8 +24,8 @@ export default function Index() {
     return (
         <Layout>
             <h1>Users</h1>
-            <Link href="/users/add" className="btn btn-sm btn-success mb-2">Add User</Link>
-            <table className="table table-striped">
+            <Link href="/admin/users/add">Add User</Link>
+            <table>
                 <thead>
                     <tr>
                         <th style={{ width: '30%' }}>First Name</th>
@@ -41,20 +41,16 @@ export default function Index() {
                             <td>{user.lastName}</td>
                             <td>{user.username}</td>
                             <td style={{ whiteSpace: 'nowrap' }}>
-                                <Link href={`/users/edit/${user.id}`} className="btn btn-sm btn-primary mr-1">Edit</Link>
-                                <button onClick={() => deleteUser(user.id)} className="btn btn-sm btn-danger btn-delete-user" disabled={user.isDeleting}>
-                                    {user.isDeleting 
-                                        ? <span className="spinner-border spinner-border-sm"></span>
-                                        : <span>Delete</span>
-                                    }
+                                <Link href={`/admin/users/edit/${user.id}`}>Edit</Link>
+                                <button onClick={() => deleteUser(user.id)} disabled={user.isDeleting}>
                                 </button>
                             </td>
                         </tr>
                     )}
                     {users && !users.length &&
                         <tr>
-                            <td colSpan="4" className="text-center">
-                                <div className="p-2">No Users To Display</div>
+                            <td colSpan="4" style="text-center">
+                                <h3>No Users To Display</h3>
                             </td>
                         </tr>
                     }

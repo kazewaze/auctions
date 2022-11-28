@@ -61,7 +61,7 @@ export default function Header({admin}) {
               </a>
             </Link>
           </div>
-          <hr className={styles.hLine} noshade="" />
+          <hr className={styles.hLine} noShade="" />
           <ul className={styles.links}>
             { admin ? links["admin"] : links["user"] }
             { admin ? <li key="LogoutKey"><a onClick={logout}>Logout</a></li> : ''}

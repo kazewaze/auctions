@@ -1,11 +1,11 @@
 [
-  {
-    "firstName": "Ronnie",
-    "lastName": "Ingram",
-    "username": "ronnie",
-    "hash": "$2a$10$q9GsXQ/oQJeCmsW1V4DwN.T1jPwfrVw6FXPxn6UmYNlEZgnw1xSfe",
-    "id": 1,
-    "dateCreated": "2022-12-01T06:30:29.546Z",
-    "dateUpdated": "2022-12-01T06:30:29.546Z"
-  }
+    {
+        "firstName": "Ronnie",
+        "lastName": "Ingram",
+        "username": "ronnie",
+        "hash": "$2a$10$Ifu.OY.3bA8UIWnxyB2sL.T/VzYyu7570k5aFxjCCzidsRIpwclxG",
+        "id": 1,
+        "dateCreated": "2022-11-24T21:26:22.854Z",
+        "dateUpdated": "2022-11-24T21:26:22.854Z"
+    }
 ]

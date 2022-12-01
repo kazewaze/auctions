@@ -31,7 +31,7 @@ const securityHeaders = [
         secret: process.env.SECRET
     },
     publicRuntimeConfig: {
-        apiUrl: 'https://ronnieingramauctions.vercel.app/api'
+        apiUrl: 'https://ronnieingram.vercel.app/api'
     },
     async headers() {
       return [

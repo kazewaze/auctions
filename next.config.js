@@ -40,5 +40,13 @@ const securityHeaders = [
           headers: securityHeaders,
         },
       ]
-    }
+    },
+    async rewrites() {
+      return [
+        {
+          source: '/api/:path*',
+          destination: 'https://ronnieingram.vercel.app/:path*',
+          },
+        ]
+    },
   };

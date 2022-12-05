@@ -11,7 +11,7 @@ export function Layout({ children }) {
     useEffect(() => {
         // redirect to home if already logged in
         if (userService.userValue) {
-            router.push('/');
+            router.push('/admin/dashboard');
         }
 
         // eslint-disable-next-line react-hooks/exhaustive-deps

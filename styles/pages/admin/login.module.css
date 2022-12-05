@@ -25,3 +25,10 @@
   margin: 30px 15px 30px 15px;
   padding: 3.5px;
 }
+
+.alert-dissmisable,
+.alert-danger
+{
+  color: #DD0426;
+  background-color: #fce6e9;
+}

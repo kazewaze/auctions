@@ -6,7 +6,6 @@ import * as Yup from 'yup';
 import { Link } from 'components'
 import { Layout } from 'components/account';
 import { userService, alertService } from 'services';
-// import classes from '../../helpers/classes'
 
 import styles from '../../styles/pages/admin/login.module.css'
 
@@ -37,9 +36,8 @@ export default function Login() {
     return (
         <Layout>
             <div className={styles.Card}>
-                <h4 className={styles.CardHeader}>Admin Login</h4>
                 <div className={styles.cardBody}>
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <form className={styles.Form} onSubmit={handleSubmit(onSubmit)}>
                         <div className={styles.formGroup}>
                             <label>Username</label>
                             <input name="username" type="text" {...register('username')} className={`form-control ${errors.username ? 'is-invalid' : ''}`} />

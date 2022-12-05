@@ -3,10 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import styles from '../styles/header.module.css';
+
 import classes from '../../helpers/classes';
 import generateLinks from '../../helpers/links';
 
-// import { NavLink } from 'components';
 import { userService } from 'services';
 
 const links = {

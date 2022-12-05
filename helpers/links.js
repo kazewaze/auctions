@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { NavLink } from 'components';
 
 export default function links(linksArray, adminNav=false) {
   if (!typeof linksArray === 'object') {
@@ -9,10 +9,10 @@ export default function links(linksArray, adminNav=false) {
 
   return linksArray.map(item => {
     return (
-      <li key={item + "Key"}>
-        <Link href={path + item.toLowerCase().split(' ')[0]}>
+      <li key={path + item.toLowerCase().split(' ')[0] + "Key"}>
+        <NavLink className={item.toLowerCase().split(' ')[0] + "NavLink"} href={path + item.toLowerCase().split(' ')[0]}>
           {item}
-        </Link>
+        </NavLink>
       </li>
     );
   });

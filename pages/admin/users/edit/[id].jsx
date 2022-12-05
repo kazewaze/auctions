@@ -20,7 +20,7 @@ function Edit({ id }) {
         <Layout>
             <h1>Edit User</h1>
             <AddEdit user={user} />
-            {!user ? <h3>No User Exists</h3> : ''}
+            {/* {!user ? <h3>No User Exists</h3> : ''} */}
         </Layout>
     );
 }

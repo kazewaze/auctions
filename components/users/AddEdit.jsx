@@ -10,6 +10,7 @@ export function AddEdit(props) {
     const user = props?.user;
     const isAddMode = !user;
     const router = useRouter();
+    console.log(user);
     
     // form validation rules 
     const validationSchema = Yup.object().shape({

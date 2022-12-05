@@ -47,6 +47,10 @@ const securityHeaders = [
           source: '/api/:path*',
           destination: 'https://ronnieingram.vercel.app/:path*',
         },
-        ]
+        {
+          source: '/:path*',
+          destination: 'https://ronnieingram.vercel.app/:path*',
+        },
+      ]
     },
   };

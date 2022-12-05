@@ -41,16 +41,12 @@ const securityHeaders = [
         },
       ]
     },
-    async rewrites() {
-      return [
-        {
-          source: '/api/:path*',
-          destination: 'https://ronnieingram.vercel.app/:path*',
-        },
-        {
-          source: '/:path*',
-          destination: 'https://ronnieingram.vercel.app/:path*',
-        },
-      ]
-    },
+    // async rewrites() {
+    //   return [
+    //     {
+    //       source: '/api/:path*',
+    //       destination: 'https://ronnieingram.vercel.app/:path*',
+    //     },
+    //   ]
+    // },
   };

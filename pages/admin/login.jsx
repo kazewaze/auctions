@@ -26,9 +26,7 @@ export default function Login() {
     function onSubmit({ username, password }) {
         return userService.login(username, password)
             .then(() => {
-                // get return url from query parameters or default to '/dashboard'
-                // const returnUrl = router.query.returnUrl || '/admin/dashboard';
-                router.push('/admin/dashboard');
+              router.push('/admin/dashboard');
             })
             .catch(alertService.error);
     }
